@@ -51,7 +51,7 @@ async function main() {
   await waitUntilTime(10, 0, 1);
   const day = getDay();
   console.log(`Fetching input for day ${day}`);
-  await getOrWriteInput(1);
+  await getOrWriteInput(day);
 }
 
 main();
