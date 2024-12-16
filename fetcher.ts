@@ -14,6 +14,7 @@ async function getOrWriteInput(day: number) {
   if (!fs.existsSync(day.toString())) {
     fs.mkdirSync(day.toString());
     fs.writeFileSync(`${day}/input.txt`, input.trim());
+    fs.writeFileSync(`${day}/${day}.ts`, "");
     console.log(`Folder "${day}" created with input.txt`);
   } else {
     fs.writeFileSync(`${day}/input.txt`, input.trim());
@@ -50,7 +51,7 @@ async function main() {
   await waitUntilTime(10, 0, 1);
   const day = getDay();
   console.log(`Fetching input for day ${day}`);
-  await getOrWriteInput(2);
+  await getOrWriteInput(day);
 }
 
 main();
