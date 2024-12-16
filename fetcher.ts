@@ -6,7 +6,6 @@ async function getInput(year: number, day: number) {
       Cookie: `session=${process.env.AOC_SESSION_ID}`,
     },
   });
-  console.log(process.env.AOC_SESSION_ID);
   return response.text();
 }
 
@@ -51,7 +50,7 @@ async function main() {
   await waitUntilTime(10, 0, 1);
   const day = getDay();
   console.log(`Fetching input for day ${day}`);
-  await getOrWriteInput(day);
+  await getOrWriteInput(2);
 }
 
 main();
