@@ -8,9 +8,9 @@ const lines = fs
 const leftList = lines.map(([left, _]) => parseInt(left, 10)).sort();
 const rightList = lines.map(([_, right]) => parseInt(right, 10)).sort();
 
-function sum(list: number[]) {
+const sum = (list: number[]) => {
   return list.reduce((acc, curr) => acc + curr, 0);
-}
+};
 
 const sumDifferences = sum(
   leftList.map((leftNum, index) => Math.abs(leftNum - rightList[index]))

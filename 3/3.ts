@@ -36,5 +36,5 @@ const sumEnabledMultiplications = (input: string): number => {
 const result = sumValidMultiplications(input);
 const result2 = sumEnabledMultiplications(input);
 
-console.log("Part 1:", result);
-console.log("Part 2:", result2);
+console.log("part 1:", result);
+console.log("part 2:", result2);
